@@ -1,0 +1,20 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div id="vue">
+
+        </div>
+
+        <script src="https://unpkg.com/vue@next"></script>
+        <script src="https://cdn.socket.io/3.1.1/socket.io.min.js" integrity="sha384-gDaozqUvc4HTgo8iZjwth73C6dDDeOJsAgpxBcMpZYztUfjHXpzrpdrHRdVp8ySO" crossorigin="anonymous"></script>
+        <script>
+            const socket = io("wss://webuilders.cz/api/v1/counter/connect");
+
+            socket.on("connect", () => {
+                console.log(socket.id);
+            });
+        </script>
+    </body>
+</html>
